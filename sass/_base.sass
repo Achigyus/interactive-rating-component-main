@@ -1,0 +1,107 @@
+@use 'variables' as vars
+@use 'breakpoint' as bp
+@use 'slider'
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+body
+    font-family: "Overpass", sans-serif
+    font-optical-sizing: auto
+    background-color: vars.$black
+    color: vars.$gray_500
+    font-style: normal
+
+.fw300
+    font-weight: 300
+
+.fw400
+    font-weight: 400
+    
+.fw500
+    font-weight: 500
+
+.fw700
+    font-weight: 700
+
+.main
+    padding: 9.625rem vars.$spacing_3
+
+.cont
+    border-radius: 0.94rem
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%)
+    padding: 1.78rem vars.$spacing_3
+
+.tri_cont_wrap
+    display: flex
+    gap: vars.$spacing_3
+    flex-direction: column
+
+.cont_top_img_cont
+    block-size: vars.$spacing_5
+    inline-size: vars.$spacing_5
+    display: flex
+    align-items: center
+    justify-content: center
+    background: vars.$gray_900
+    border-radius: 999px
+
+.cont_top_img
+    inline-size: 0.875rem
+    display: block
+
+.cont_mid
+    display: flex
+    flex-direction: column
+    gap: vars.$spacing_2
+
+.cont_mid_h1
+    font-size: vars.$spacing_3
+    color: vars.$white
+    line-height: 1.25
+
+.label_options_h2
+    font-size: 0.875rem
+    color: vars.$gray_500
+    line-height: 1.57
+    text-wrap: pretty
+
+.options_li
+    display: flex
+    align-items: center
+    justify-content: center
+    block-size: 2.625rem
+    inline-size: 2.625rem
+    border-radius: 999px
+    background: vars.$gray_900
+
+.options_label
+    font-size: 0.875rem
+    line-height: 1.3
+
+
+.cont_btm_btn
+    padding: 0.94rem
+    inline-size: 100%
+    border-radius: vars.$base_border_radius
+    background: vars.$orange
+    color: vars.$gray_950
+    font-size: 0.875rem
+    line-height: 1.3
+    border: none
+
+.options_ul
+    display: flex
+    gap: vars.$spacing_2
+    align-items: center
+    list-style: none
+    
+
+.attribution_h2
+    text-align: center
+    padding: 0.5rem
+    font-size: clamp(0.875rem, 2vw, 0.94rem)
+
+.attribution a
+    color: vars.$orange
+
+@include bp.breakpoint(48rem)
+    
