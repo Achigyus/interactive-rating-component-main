@@ -233,6 +233,29 @@ body {
   .tri_cont_wrap {
     gap: 2rem;
   }
+  .cont_top_img_cont {
+    block-size: 3rem;
+    inline-size: 3rem;
+  }
+  .cont_mid_h1 {
+    font-size: 1.75rem;
+  }
+  .label_options_h2 {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+  .options_ul {
+    gap: 1.5rem;
+  }
+  .options_label {
+    block-size: 3.19rem;
+    inline-size: 3.19rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .cont_top_img {
+    inline-size: 1.05rem;
+  }
   .tri_cont_wrap.thank_you {
     padding: 0.625rem 0.34rem;
   }
