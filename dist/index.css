@@ -75,6 +75,8 @@ body {
   border-radius: 0.94rem;
   background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
   padding: 1.78rem 1.5rem;
+  max-inline-size: 25.75rem;
+  margin: 0 auto;
 }
 
 .tri_cont_wrap {
@@ -114,10 +116,10 @@ body {
   font-size: 0.875rem;
   color: #969FAD;
   line-height: 1.57;
-  text-wrap: pretty;
+  text-wrap: wrap;
 }
 
-.options_li {
+.options_label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,11 +127,20 @@ body {
   inline-size: 2.625rem;
   border-radius: 999px;
   background: #262E38;
-}
-
-.options_label {
   font-size: 0.875rem;
   line-height: 1.3;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.options_label:hover {
+  background: #fff;
+  color: #262E38;
+}
+
+.options_li:has(input:checked) .options_label {
+  background: #FC7614;
+  color: #262E38;
 }
 
 .cont_btm_btn {
@@ -141,6 +152,12 @@ body {
   font-size: 0.875rem;
   line-height: 1.3;
   border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.cont_btm_btn:hover {
+  background: #fff;
 }
 
 .options_ul {
@@ -148,6 +165,7 @@ body {
   gap: 1rem;
   align-items: center;
   list-style: none;
+  justify-content: space-between;
 }
 
 .attribution_h2 {
@@ -158,4 +176,82 @@ body {
 
 .attribution a {
   color: #FC7614;
+}
+
+.tri_cont_wrap.thank_you {
+  padding: 0.47rem 0;
+}
+
+.cont_top_img_cont.thank_you {
+  block-size: auto;
+  inline-size: auto;
+  border-radius: 0;
+  background: none;
+}
+
+.cont_top_img.thank_you {
+  inline-size: 9rem;
+}
+
+.cont_mid.thank_you {
+  border-radius: 1.4rem;
+  background: #262E38;
+  padding: 0.375rem 0.75rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.rating_p.thank_you {
+  font-size: 0.875rem;
+  line-height: 1.57;
+  color: #FC7614;
+}
+
+.cont_btm.thank_you {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.cont_btm_h2.thank_you {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.cont_btm_p.thank_you {
+  font-size: 0.875rem;
+  line-height: 1.57;
+  color: #969FAD;
+}
+
+@media screen and (min-width: 48rem) {
+  .main {
+    padding: 12rem 1.5rem;
+  }
+  .tri_cont_wrap {
+    gap: 2rem;
+  }
+  .tri_cont_wrap.thank_you {
+    padding: 0.625rem 0.34rem;
+  }
+  .cont {
+    padding: 2.16rem 1.9rem;
+    border-radius: 1.875rem;
+  }
+  .cont_top_img.thank_you {
+    inline-size: 10.125rem;
+  }
+  .rating_p.thank_you {
+    line-height: 1.6;
+    font-size: 0.94rem;
+  }
+  .cont_btm_h2.thank_you {
+    font-size: 1.75rem;
+  }
+  .cont_btm_p.thank_you {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
 }
